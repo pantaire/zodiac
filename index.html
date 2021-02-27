@@ -1,78 +1,105 @@
-<html>
 <head>
-	<!--link rel="stylesheet" href="https://unpkg.com/awsm.css/dist/awsm.min.css"-->
-	<link rel="stylesheet" href="/style.css"-->
+	<title>🌠Zodiac</title>
+
+	<!-- Meta -->
+	<meta name="google-site-verification" content="ztCJwMJJ_0D_ob3KCK-h4JIM85l05xcEy5ZaJNzvBlA">
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=450">
+	<link rel="icon" type="image/png" href="../favicon.ico" />
+
+	<!-- Stylin' -->
+	<!--link rel="stylesheet" href="../css/index.css" /-->
+	<link rel="stylesheet" href="style.css"/>
+	<script src="main.js"></script>
 
 </head>
+
 <body>
-	<h1>🌠Zodiac Character Generator🌠</h1>
-	<div><p>Pick your sun, moon and rising sign and get a character!</p>
-		<br>
-		<br>
-	<p>I keep phantasizing about how cool it would be if humans were supernatural creatures and their powers and physical features were based on their sun, moon and rising sign</p>
-	<p> ~ littledarkfairywitch on tumblr</p>
+	<!-- NAV/LINKS -->
+	<div id="header">
+		<div id="nav">
+			<span id="nav_names">🌠Zodiac Generator🌠</span>
+		</div>
 	</div>
-	<div>
-		Insert explanation from table in here
+
+	<div id="content">
+
+		<h1 id="summary">
+			Pick your sun, moon and rising sign and get a character!
+		</h1>
+
+		<div id="post">
+			<div>
+				<p>I keep phantasizing about how cool it would be if humans were supernatural creatures and their powers
+					and physical features were based on their sun, moon and rising sign</p>
+				<p> ~ littledarkfairywitch on tumblr</p>
+			</div>
+			<div>
+				Insert explanation from table in here
+			</div>
+			<div>
+				<form>
+					Sun:
+					<select id="sun">
+						<option value=”aquarius”>Aquarius</option>
+						<option value=”pisces”>Pisces</option>
+						<option value=”aries”>Aries</option>
+						<option value=”taurus”>Taurus</option>
+						<option value=”gemini”>Gemini</option>
+						<option value=”cancer”>Cancer</option>
+						<option value=”leo”>Leo</option>
+						<option value=”virgo”>Virgo</option>
+						<option value=”libra”>Libra</option>
+						<option value=”scorpio”>Scorpio</option>
+						<option value=”sagittarius”>Sagittarius</option>
+						<option value=”capricorn”>Capricorn</option>
+					</select>
+					Moon:
+					<select id="moon">
+						<option value=”aquarius”>Aquarius</option>
+						<option value=”pisces”>Pisces</option>
+						<option value=”aries”>Aries</option>
+						<option value=”taurus”>Taurus</option>
+						<option value=”gemini”>Gemini</option>
+						<option value=”cancer”>Cancer</option>
+						<option value=”leo”>Leo</option>
+						<option value=”virgo”>Virgo</option>
+						<option value=”libra”>Libra</option>
+						<option value=”scorpio”>Scorpio</option>
+						<option value=”sagittarius”>Sagittarius</option>
+						<option value=”capricorn”>Capricorn</option>
+					</select>
+					Rising:
+					<select id="rising">
+						<option value=”aquarius”>Aquarius</option>
+						<option value=”pisces”>Pisces</option>
+						<option value=”aries”>Aries</option>
+						<option value=”taurus”>Taurus</option>
+						<option value=”gemini”>Gemini</option>
+						<option value=”cancer”>Cancer</option>
+						<option value=”leo”>Leo</option>
+						<option value=”virgo”>Virgo</option>
+						<option value=”libra”>Libra</option>
+						<option value=”scorpio”>Scorpio</option>
+						<option value=”sagittarius”>Sagittarius</option>
+						<option value=”capricorn”>Capricorn</option>
+					</select>
+					<input type="button" onclick="displayResult()" value="Go🌠">
+				</form>
+			</div>
+			<div id="result">
+				Your character:
+				<br>
+				Inputtest: <span id="inputHere"></span>
+				Main Colours: <span id="colours"></span>
+				Hair: <span id="hair"></span>
+				Eyes: <span id="eyes"></span>
+				Figure: <span id="figure"></span>
+				Attributes: <span id="attributes"></span>
+			</div>
+		</div>
 	</div>
-	<div>
-		<form>
-			Sun:
-			<select>
-				<option value=”aquarius”>Aquarius</option>
-				<option value=”pisces”>Pisces</option>
-				<option value=”aries”>Aries</option>
-				<option value=”taurus”>Taurus</option>
-				<option value=”gemini”>Gemini</option>
-				<option value=”cancer”>Cancer</option>
-				<option value=”leo”>Leo</option>
-				<option value=”virgo”>Virgo</option>
-				<option value=”libra”>Libra</option>
-				<option value=”scorpio”>Scorpio</option>
-				<option value=”sagittarius”>Sagittarius</option>
-				<option value=”capricorn”>Capricorn</option>
-			</select>
-			Moon:
-			<select>
-				<option value=”aquarius”>Aquarius</option>
-				<option value=”pisces”>Pisces</option>
-				<option value=”aries”>Aries</option>
-				<option value=”taurus”>Taurus</option>
-				<option value=”gemini”>Gemini</option>
-				<option value=”cancer”>Cancer</option>
-				<option value=”leo”>Leo</option>
-				<option value=”virgo”>Virgo</option>
-				<option value=”libra”>Libra</option>
-				<option value=”scorpio”>Scorpio</option>
-				<option value=”sagittarius”>Sagittarius</option>
-				<option value=”capricorn”>Capricorn</option>
-			</select>
-			Rising: 
-			<select>
-				<option value=”aquarius”>Aquarius</option>
-				<option value=”pisces”>Pisces</option>
-				<option value=”aries”>Aries</option>
-				<option value=”taurus”>Taurus</option>
-				<option value=”gemini”>Gemini</option>
-				<option value=”cancer”>Cancer</option>
-				<option value=”leo”>Leo</option>
-				<option value=”virgo”>Virgo</option>
-				<option value=”libra”>Libra</option>
-				<option value=”scorpio”>Scorpio</option>
-				<option value=”sagittarius”>Sagittarius</option>
-				<option value=”capricorn”>Capricorn</option>
-			</select>
-			<input type="button" onclick="displayResult()" value="Go🌠">
-		</form>
-	</div>
-	<div id="result">
-		Your character: 
-		<br>
-		Main Colours: <span id="colours"></span>
-		Hair: <span id="hair"></span>
-		Eyes: <span id="eyes"></span>
-		Figure: <span id="figure"></span>
-		Attributes: <span id="attributes"></span>
-	</div>
-</body>	
-</html>
+
+</body>

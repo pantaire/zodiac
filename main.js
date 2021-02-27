@@ -133,5 +133,6 @@
     }    
 ];
 function displayResult() {
-    
+    sun = document.getElementById("sun").value;
+    document.getElementById("inputHere").innerHTML = sun;
 }
